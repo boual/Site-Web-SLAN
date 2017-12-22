@@ -79,7 +79,7 @@
             <%-- Contient le menu du site --%>
                  <asp:ContentPlaceHolder  ID="CPH_Menu" runat="server">
                 <div class="menu">
-                <asp:ImageButton CssClass="Slan" ID="Slan" ImageUrl="~/SLAN bleu blanc fond transparent.png" runat="server"  />
+                <asp:ImageButton CssClass="Slan" ID="Slan" ImageUrl="~/SLAN bleu blanc fond transparent.png" runat="server" OnClick="Slan_Click" />
                     <asp:ImageButton CssClass="Button"  ID="Commanditaires" ImageUrl="~/Commanditaires.png"  runat="server"  />
                     <asp:ImageButton CssClass="Button"  ID="Reservation" ImageUrl="~/Réservations.png" OnClick="Réservation_Click" runat="server" />
                     <asp:ImageButton CssClass="Button"  ID="Photos" ImageUrl="~/Photos.png"  runat="server"  />

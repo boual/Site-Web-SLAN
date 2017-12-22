@@ -35,5 +35,10 @@ namespace SLAN
         {
             Response.Redirect("~/Informations.aspx");
         }
+
+        protected void Slan_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/PagePrincipale.aspx");
+        }
     }
 }
