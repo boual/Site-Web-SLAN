@@ -1,0 +1,153 @@
+﻿<%-- Travail fait par Frédéric Smith
+       Travail  présenter à Maxime Rioux
+       Date de remise : 16 décembre 2017
+    But du progamme : Site Web du SLAN Révolution. Ce programme sert de site web pour afficher de l'information,
+    réserver des places et autres pour le SLAN. --%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPrincipal.master.cs" Inherits="SLAN.MasterPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%-- Page de style --%>
+    <style>
+            .Button {
+    float: right;
+	display:block;
+    width:10%;
+}
+           .menu{
+        float:left;
+        width:100%;
+    background-color:rgb(41,53,89);
+}
+            .Slan{
+    float:left;
+    width:15%;
+}
+            body{
+               
+    background-color:black;
+    
+}
+
+ .media
+        {
+            float:left;
+            left:0;
+            top:92%;
+            min-height: 100%;
+            width:60%;
+            height: auto;
+            text-align:center;
+            border-image:none;
+        }
+
+        .logoCegep
+        {
+            float:right;
+            left:85%;
+            top:90%;
+            
+            min-height: 100%;
+            width: 20%;
+            height: auto;
+        }
+        .bas{
+            
+            float:left;
+            width:100%;
+            padding-top:2%;
+            padding-bottom:1%;
+            
+        }
+        .droit{
+            text-align:center;
+            color:white;
+            width:20%;
+            float:left;
+        }
+
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <header>
+            <%-- Contient le menu du site --%>
+                 <asp:ContentPlaceHolder  ID="CPH_Menu" runat="server">
+                <div class="menu">
+                <asp:ImageButton CssClass="Slan" ID="Slan" ImageUrl="~/SLAN bleu blanc fond transparent.png" runat="server"  />
+                    <asp:ImageButton CssClass="Button"  ID="Commanditaires" ImageUrl="~/Commanditaires.png"  runat="server"  />
+                    <asp:ImageButton CssClass="Button"  ID="Reservation" ImageUrl="~/Réservations.png" OnClick="Réservation_Click" runat="server" />
+                    <asp:ImageButton CssClass="Button"  ID="Photos" ImageUrl="~/Photos.png"  runat="server"  />
+                    <asp:ImageButton CssClass="Button" ID="Tournois" ImageUrl="~/Tournois.png"  runat="server" OnClick="Tournois_Click"  />
+                 <asp:ImageButton CssClass="Button" ID="Information" ImageUrl="~/Informations.png" runat="server" OnClick="Information_Click"  />
+                
+                </div>
+            </asp:ContentPlaceHolder>
+           
+        </header>
+
+        <div>
+            <%-- Contient la page --%>
+        <asp:ContentPlaceHolder ID="CPH_Page" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <%-- Contient le pied de page --%>
+            <asp:ContentPlaceHolder ID="CPH_Pied" runat="server">
+                <div class="bas">
+                <div class="droit">
+                    <asp:Label ID="droit" runat="server" Text="Slan Revolution Tous droits réservés."></asp:Label>
+                </div>
+                <div class="media">
+            <a href="https://www.facebook.com/SlanRevolution/" target="_blank" >
+                <img
+                    id="fb"
+                    src="images/facebook.png" />
+            </a>
+
+            <a href="https://www.instagram.com/slanrevolution/" target="_blank" >
+            <img
+                id="insta"
+                src="images/insta.png" />
+            </a>
+
+            <a href="SnapCode.aspx" target="_blank">
+                <img
+                    id="snap"
+                    src="images/snapchat.png" />
+            </a>
+
+            <a href="https://go.twitch.tv/slan_revolution" target="_blank" >
+                <img
+                    id="twitch"
+                    src="images/twitch.png"/>
+            </a>
+
+            <%--Source pour ouvrir l'application de mail par défault du user : https://www.codeproject.com/Questions/242255/how-to-open-default-mail-client-using-csharp--%>
+            <asp:HyperLink
+                id="hl_mail"
+                runat="server"
+                NavigateUrl="mailto:slanrevolution@cegepsi.ca">
+                <img
+                    id="mail"
+                    src="images/mail.png" />
+            </asp:HyperLink>
+            </div>
+            <a class="logoCegep" href="http://www.cegep-sept-iles.qc.ca/fr" target="_blank">
+                <img
+                    id="logoCeg"
+                    src="images/cegepsi.png" />
+            </a>
+        </div>
+            </asp:ContentPlaceHolder>
+        </footer>
+    </form>
+</body>
+</html>

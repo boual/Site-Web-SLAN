@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPrincipal.Master" AutoEventWireup="true" CodeBehind="MasterSecondaire.master.cs" Inherits="SLAN.NestedMasterPage1" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH_Page" runat="server">
+    <style>
+        .BordureMenu
+        {
+            margin-top: 7%;
+            border: solid 5px #3399ff;
+            padding: 5%;
+            float:left;
+            background-color: #333333;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+
+        <div class="BordureMenu">
+
+            <asp:ImageButton ID="BT_CS" runat="server" Width="100" Height="100" ImageUrl="~/store_image_02.png" OnClick="BT_CS_Click"/>
+            <br />
+            <br />
+            <asp:ImageButton ID="BT_RL" runat="server" Width="100" Height="100" ImageUrl="~/boxart_comp1.f1cb27a519bdb5b6ed34049a5b86e317.jpg" OnClick="BT_RL_Click"/>
+            <br />
+            <br />
+            <asp:ImageButton ID="BT_LOL" runat="server" Width="100" Height="100" ImageUrl="~/téléchargement.jpg" OnClick="BT_LOL_Click" />
+        </div>
+
+    </asp:ContentPlaceHolder>
+
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
+
